@@ -50,7 +50,7 @@ export class DogViewComponent implements OnInit{
   constructor(private dogService: DogsService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.dogObs$ = this.route.paramMap.pipe(map((params) => {
+    this.dogObs$ = this.route.paramMap.pipe(map(params => {
       return this.dogService.dogs[Number(params.get('index'))];
     }));
   }

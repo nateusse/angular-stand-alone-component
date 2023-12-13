@@ -13,7 +13,7 @@ import { DogListCardComponent } from './dog-list-card.component';
       <h2 class="hero-text">Discover Pets to walk near you</h2>
     </section>
     <article class="pet-list">
-      <app-dog-list-card *ngFor="let dog of dogService.dogs" [doguito]="dog"></app-dog-list-card>
+      <app-dog-list-card *ngFor="let dog of dogService.dogs let i = index" [index]="i" [doguito]="dog"></app-dog-list-card>
     </article>
   `,
   styles: [

@@ -1,8 +1,12 @@
 import { Component, Input } from '@angular/core';
 import { Dog } from '../dog.service';
+import { RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
 
 @Component({
   selector: 'app-dog-list-card',
+  imports: [CommonModule, RouterModule],
   standalone: true,
   template: `
   <article class="pet-card">
